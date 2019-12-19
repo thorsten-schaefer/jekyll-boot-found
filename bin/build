@@ -1,0 +1,6 @@
+
+NOW=$(date +"_%Y-%d-%m_%H-%M-%S")
+
+#      tar -cf archiv-site/site$NOW.tar _site
+
+jekyll build --trace -i

@@ -1,0 +1,50 @@
+
+# Datum: siehe https://www.cyberciti.biz/faq/linux-unix-formatting-dates-for-display/
+
+https://dzone.com/articles/what-is-git-checkout-remote-branch-how-it-works-wh
+
+
+delete branch: git push -d origin gh-pages
+
+
+Die Links:
+=========
+
+https://thorstenschaeferwetter.github.io/blogsite/
+
+view-source:https://thorstenschaeferwetter.github.io/blogsite/
+
+https://thorstenschaeferwetter.github.io/blogsite/css/main.css
+
+https://github.com/ThorstenSchaeferWetter/blogsite
+
+
+# How to list all files ordered by size
+# --> https://unix.stackexchange.com/questions/53737/how-to-list-all-files-ordered-by-size
+ls -lR | grep '^-' | sort -k 5 -rn
+
+# How do I limit the number of files printed by ls?
+# --> https://unix.stackexchange.com/questions/21471/how-do-i-limit-the-number-of-files-printed-by-ls
+ls -U | head -4
+ bzw. 
+ls -lR | grep '^-' | sort -k 5 -rn | head -4
+
+# How to sort human readable size
+# --> https://unix.stackexchange.com/questions/524760/how-to-sort-human-readable-size
+ls -lhR | grep '^-' | sort -hk 5 -r | head -4
+
+# If you do need the full path of the files, use something like this:
+# --> https://unix.stackexchange.com/questions/53737/how-to-list-all-files-ordered-by-size
+# (--> weiter unten, in eimem Update einer Anwort)
+find . -type f  -exec du -h {} + | sort -r -h | head -20
+
+###################################
+# Key Bindung für Auto-Indent in Atom-Editor: EIntrag 
+'atom-text-editor':
+  'ctrl-i': 'editor:auto-indent'
+# in File keymal.cson vornehmen
+
+########################################
+GULP:
+https://stackoverflow.com/questions/39665773/gulp-error-watch-task-has-to-be-a-function
+https://github.com/gulpjs/gulp/issues/1904

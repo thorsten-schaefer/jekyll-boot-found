@@ -1,0 +1,60 @@
+
+
+# Site Settings
+locale                   : "de-DE"
+title                    : "IP duties"
+title_separator          : "-"
+subtitle                 : # site tagline that appears below site title in masthead
+name                     : "Thorsten Schäfer"
+description              : "An amazing website."
+#url                      : "https://thorsten-schaefer.github.io"
+baseurl                  : /jekyll-boot-found
+
+# Handling Reading
+include:
+  - ".htaccess"
+  - "_pages"
+
+exclude:
+  - ".DS_Store"
+  - "/assets/"
+  - "DOC.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "/gulpfile.js/"
+  - "gulpfile.js"
+  - "LICENSE.md"
+  - "node_modules"
+  - "npm-debug.log"
+  - "package.json"
+  - "README.md"
+  - "rev-manifest.json"
+  - "yarn.lock"
+  - "yarn-error.log"
+  - "/snippets/"
+  - "/archiv/"
+  - "/.git/"
+  - ".gitignore"
+  - "/log/"
+  - "/bin"
+
+# Plugins
+# Add plugins in the Gemfile
+
+# Conversion
+incremental:      true
+
+# Serving
+# url:            ""
+# baseurl:        "" # does not include hostname
+
+# Outputting
+permalink:        "/blog/:year/:title/"
+paginate_path:    "/blog/page:num"
+paginate:         5
+
+compress_html:
+  ignore:
+    envs: [development]
+
+highlighter:      rouge

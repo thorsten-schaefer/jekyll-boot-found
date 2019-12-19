@@ -1,0 +1,24 @@
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel-item-vertical {
+  @extend .carousel-item;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+.caption-rounded-top {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.caption-rounded-bottom {
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}

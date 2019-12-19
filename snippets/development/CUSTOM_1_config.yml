@@ -1,0 +1,64 @@
+# Browsersync config
+BROWSERSYNC:
+  # URL of local development server goes here (ex. http://localsite.dev)
+  # (is proxied to, for example, http:localhost:3000)
+  url: "http://site02.wordpress.local"
+
+# Autoprefixer will make sure your CSS works with these browsers
+COMPATIBILITY:
+  - "last 2 versions"
+  - "ie >= 9"
+  - "ios >= 7"
+  
+# Set to true if you want static asset revisioning, helpful for cache busting
+REVISIONING: false
+
+# Gulp will reference these paths when it copies files
+PATHS:
+   # definde server theme directory
+   #td: "."
+   td: "C:/Users/erleb/Development/Server/WampNet/sites/site02.wordpress.local/wp-content/themes/04-foundationpress"
+   # Path to dist folder
+   dist: "${PATHS.td}/dist"
+   # Path to Source-Folder
+   src: "C:/Users/erleb/OneDrive/Workspaces/ws-spectre/07-foundation-from-git/src_custom/src_custom_01/src"
+   # Main Path of development template pages
+   main: "C:/Users/erleb/OneDrive/Workspaces/ws-spectre/07-foundation-from-git/src_custom/src_custom_01"
+   # Define Local NODE_PATH
+   node_modules_local: "C:/Users/erleb/Development/foundation/node_modules/" 
+   # Paths to static assets that aren't images, CSS, or JavaScript
+   assets:
+      - "${PATHS.src}/assets/**/*"
+      - "!${PATHS.src}/assets/{images,images/**/*,js,js/**/*,scss,scss/**/*}"
+   # Paths to Sass libraries, which can then be loaded with @import
+   sass:
+      - "${PATHS.node_modules_local}foundation-sites/scss"
+      - "${PATHS.node_modules_local}motion-ui/src"
+   # Paths to JavaScript entry points for webpack to bundle modules
+   entries:
+      - "${PATHS.src}/assets/js/app.js"
+      - "${PATHS.src}/assets/js/custom.js"
+   # UnCSS will use these settings
+   uncss_options:
+      html:
+      - "${PATHS.main}/**/*.{php,html,twig}"
+   # Paths for the package task to include/exclude in .zip archive
+   package:
+      - "${PATHS.main}/**/*"
+      - "!${PATHS.main}/**/node_modules/**"
+      - "!${PATHS.main}/**/packaged/**"
+      - "!${PATHS.main}/**/src/**"
+      - "!${PATHS.main}/**/codesniffer.ruleset.xml"
+      - "!${PATHS.main}/**/composer.json"
+      - "!${PATHS.main}/**/composer.lock"
+      - "!${PATHS.main}/**/config.yml"
+      - "!${PATHS.main}/**/config.default.yml"
+      - "!${PATHS.main}/**/gulpfile.babel.js"
+      - "!${PATHS.main}/**/package.json"
+      - "!${PATHS.main}/**/package-lock.json"
+      - "!${PATHS.main}/**/webpack.config.js"
+   # Paths for PHP CodeSniffer
+   phpcs:
+      - "${PATHS.main}/**/*.php"
+      - "!${PATHS.main}/wpcs"
+      - "!${PATHS.main}/wpcs/**"  

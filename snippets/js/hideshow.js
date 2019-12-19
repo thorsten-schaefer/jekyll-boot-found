@@ -1,0 +1,10 @@
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("span").hide();
+  });
+  $("#show").click(function(){
+    $("span").show();
+  });
+});
+</script>
